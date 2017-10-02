@@ -110,6 +110,19 @@
         android:textColor="@android:color/white"
         android:textSize="15.0sp"/>
 
+     <TextView
+         android:id="@+id/temp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@id/humidity"
+         android:layout_marginLeft="15.0dip"
+         android:singleLine="true"
+         android:text="温度：5℃"
+         android:textColor="@android:color/white"
+         android:textSize="15.0sp"/>
+
+
     <LinearLayout
         android:id="@+id/pm2_5_content"
         android:layout_width="wrap_content"
