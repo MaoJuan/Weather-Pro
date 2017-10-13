@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         void initView(){
             city_name_Tv=(TextView)findViewById(R.id.title_city_name);
             cityTv=(TextView)findViewById(R.id.city);
-            timeTv=(TextView)findViewById(R.id.city);
+            timeTv=(TextView)findViewById(R.id.time);
             humidityTv=(TextView)findViewById(R.id.humidity);
             weekTv=(TextView)findViewById(R.id.week_today);
             pmDataTv=(TextView)findViewById(R.id.pm_data);
