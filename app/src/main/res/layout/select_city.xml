@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/selectcity_title"
         android:layout_width="fill_parent"
         android:layout_height="45.0dip"
         android:background="#ffcd2626">
@@ -14,7 +15,8 @@
             android:gravity="center"
             android:text="当前城市：北京"
             android:textColor="#ffffffff"
-            android:textSize="20.0dip" />
+            android:textSize="20.0dip"
+            />
 
         <ImageView
             android:id="@+id/title_back"
@@ -33,4 +35,21 @@
             android:background="#A71717"
             android:gravity="center" />
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/selectcity_title"
+        >
+        <ListView
+            android:id="@+id/selectcity_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
     </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
