@@ -32,8 +32,8 @@ import cn.edu.pku.mj.util.NetUtil;
  */
 
 public class MainActivity extends Activity implements View.OnClickListener{
-    //private String updateCityCode;
-    //TodayWeather todayWeather=null;
+    private String updateCityCode;
+    TodayWeather todayWeather=null;
 
     private static final  int UPDATE_TODAY_WEATHER=1;
     private ImageView mUpdateBtn;
@@ -57,29 +57,29 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       // Log.d("MainActivity","onCreate");
+        Log.d("MainActivity","onCreate");
         setContentView(R.layout.weather_info);
 
         mUpdateBtn=(ImageView)findViewById(R.id.title_update_btn);
         mUpdateBtn.setOnClickListener(this);
 
-        if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
+       /* if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
             Log.d("myweather", "网络OK");
             Toast.makeText(MainActivity.this, "网络ok", Toast.LENGTH_LONG).show();
         } else {
             Log.d("myweather", "网络挂了");
             Toast.makeText(MainActivity.this, "网络挂了", Toast.LENGTH_LONG).show();
-        }
+        }*/
 
         mCitySelect=(ImageView)findViewById(R.id.title_city_manager);
         mCitySelect.setOnClickListener(this);
 
         initView();
 
-     /*   updateCityCode=getIntent().getStringExtra("citycode");
+        updateCityCode=getIntent().getStringExtra("cityCode");
         if(updateCityCode!="-1"){
             queryWeatherCode(updateCityCode);
-        }*/
+        }
     }
 
         void initView(){
@@ -366,8 +366,4 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
         return todayWeather;
     }
-
-
-
-
 }

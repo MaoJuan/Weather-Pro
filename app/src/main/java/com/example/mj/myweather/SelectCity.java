@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.LogManager;
 
 import cn.edu.pku.mj.app.MyApplication;
 import cn.edu.pku.mj.bean.City;
@@ -30,7 +31,7 @@ public class SelectCity extends Activity implements View.OnClickListener {
     private MyApplication mApplication;
     private ArrayList<String> mArrayList;
 
-    //private String updateCityCode="-1";
+    private String updateCityCode="-1";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,25 +52,26 @@ public class SelectCity extends Activity implements View.OnClickListener {
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(SelectCity.this,android.R.layout.simple_list_item_1,mArrayList);
         cityListLv.setAdapter(adapter);
 
-      /*  AdapterView.OnItemClickListener itemClickListener=new AdapterView.OnItemClickListener(){
+        AdapterView.OnItemClickListener itemClickListener=new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int updateCityCode=Integer.parseInt(mCityList.get(position).getNumber());
-                Log.d("update city code",Integer.toString(updateCityCode));
+                int updateCityCode1=Integer.parseInt(mCityList.get(position).getNumber());
+                Log.d("update city code",Integer.toString(updateCityCode1));
+                updateCityCode = Integer.toString(updateCityCode1);
             }
         };
 
         cityListLv.setOnItemClickListener(itemClickListener);
-    */
+
     }
 
- public void onClick(View v){
+    public void onClick(View v){
         switch(v.getId()){
             case R.id.title_back:
-                Intent i=new Intent();
-                i.putExtra("cityCode","101160101");
-                setResult(RESULT_OK,i);
-                finish();
+                Intent i=new Intent(this,MainActivity.class);
+            //    int updateCityCode=Integer.parseInt(mCityList.get(position).getNumber());
+                i.putExtra("cityCode",updateCityCode);
+                startActivity(i);
                 break;
             default:
                 break;
