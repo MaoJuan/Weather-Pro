@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+   <RelativeLayout
         android:id="@+id/selectcity_title"
         android:layout_width="fill_parent"
         android:layout_height="45.0dip"
@@ -37,6 +37,39 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/selectcity_search_rela"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/selectcity_search_buttonrela">
+            <EditText
+                android:id="@+id/selectcity_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/contact_search_box"
+                android:hint=" 搜索全国城市（中文）"
+                android:paddingLeft="35.0dp"
+                android:singleLine="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectcity_search_buttonrela"
+            android:layout_width="80.0dp"
+            android:layout_height="45.0dp"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/selectcity_search_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/magnifying_glass"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/selectcity_title"
@@ -47,7 +80,6 @@
             android:layout_height="match_parent">
         </ListView>
     </RelativeLayout>
-
 
 </RelativeLayout>
 
